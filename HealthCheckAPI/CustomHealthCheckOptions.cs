@@ -18,7 +18,7 @@ namespace HealthCheckAPI
                 var result = JsonSerializer.Serialize(new {
                         checks = r.Entries.Select(e => new {
                             name = e.Key,
-                            responceTime = e.Value.Duration.TotalMilliseconds,
+                            responseTime = e.Value.Duration.TotalMilliseconds,
                             status = e.Value.Status.ToString(),
                             description = e.Value.Description
                         }),
